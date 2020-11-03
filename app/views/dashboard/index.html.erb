@@ -1,0 +1,31 @@
+<h1>DASHBOARD</h1>
+
+<h2> DATOS GENERALES DE VENTAS </h2>
+
+<%= column_chart @sales_grouped_by_month, title: "MONTO VENDIDO POR MES ", colors: ['red']%>
+<br/>
+<%= column_chart @sales_quantity_by_month, title: "CANTIDAD VENDIDA POR MES ", colors: ['pink']%>
+<br/>
+<%= column_chart @sales_average_by_month, title: "PROMEDIO DE VENTAS POR MES ", colors: ['blue']%>
+<br/>
+<br/>
+
+<h2> DATOS DE VENTAS POR ORIGEN DEL CAFÉ</h2>
+<%= pie_chart @sales_by_coffee_origin_12, title: "VENTAS SEGÚN ORIGEN - ÚLTIMOS 12 MESES "%>
+<br/>
+<%= pie_chart @sales_by_coffee_origin_6, title: "VENTAS SEGÚN ORIGEN - ÚLTIMOS 6 MESES "%>
+<br/>
+<%= pie_chart @sales_by_coffee_origin_3, title: "VENTAS SEGÚN ORIGEN - ÚLTIMOS 6 MESES "%>
+<br/>
+<%= pie_chart @sales_by_coffee_origin_1, title: "VENTAS SEGÚN ORIGEN - ÚLTIMO MES "%>
+<br/>
+<br/>
+
+<h2> DATOS DE VENTAS POR TIPO DE MEZCLA DE CAFÉ </h2>
+<%= pie_chart @sales_by_coffee_blend_12, title: "VENTAS SEGÚN BLEND - ÚLTIMOS 12 MESES "%>
+<br/>
+<%= pie_chart @sales_by_coffee_blend_6, title: "VENTAS SEGÚN BLEND - ÚLTIMOS 6 MESES "%>
+<br/>
+<%= pie_chart @sales_by_coffee_blend_3, title: "VENTAS SEGÚN BLEND - ÚLTIMOS 3 MESES "%>
+<br/>
+<%= pie_chart @sales_by_coffee_blend_1, title: "VENTAS SEGÚN BLEND - ÚLTIMO MES "%>
